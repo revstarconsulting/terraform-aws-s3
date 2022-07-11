@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3_bucket" { #tfsec:ignore:AWS002 tfsec:ignore:AWS017 tfsec:ignore:AWS077
-  bucket = var.bucket_name
+  bucket = "${var.account_id}-${var.bucket_name}"
 
   tags = local.common_tags
 }
