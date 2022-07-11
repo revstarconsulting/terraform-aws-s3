@@ -8,6 +8,11 @@ variable "logging_bucket_name" {
   type        = string
 }
 
+variable "account_id" {
+  description = "AWS Account ID"
+  type        = string
+}
+
 variable "environment" {
   description = "Provide appropriate environment name"
   type        = string
