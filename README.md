@@ -9,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.22.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.27.0 |
 
 ## Modules
 
@@ -35,6 +35,7 @@ No modules.
 | <a name="input_block_public_acls"></a> [block\_public\_acls](#input\_block\_public\_acls) | Set this variable to false if public access is requested. | `bool` | `true` | no |
 | <a name="input_block_public_policy"></a> [block\_public\_policy](#input\_block\_public\_policy) | Set this variable to false is public access is requested. | `bool` | `true` | no |
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | The name of the S3 private bucket. | `string` | n/a | yes |
+| <a name="input_cors_rules"></a> [cors\_rules](#input\_cors\_rules) | CORS rules for buckets | `any` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Provide appropriate environment name | `string` | n/a | yes |
 | <a name="input_logging_bucket_name"></a> [logging\_bucket\_name](#input\_logging\_bucket\_name) | The name of S3 logging bucket name | `string` | n/a | yes |
 | <a name="input_versioning"></a> [versioning](#input\_versioning) | Enable or Disable versioning | `string` | `"no"` | no |

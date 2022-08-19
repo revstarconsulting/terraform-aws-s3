@@ -36,6 +36,10 @@ variable "block_public_policy" {
   default     = true
 }
 
+variable "cors_rules" {
+  description = "CORS rules for buckets"
+  type        = any
+}
 
 locals {
   common_tags = {

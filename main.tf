@@ -35,11 +35,14 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
 resource "aws_s3_bucket_cors_configuration" "this" {
   bucket = aws_s3_bucket.s3_bucket.id
 
-  cors_rule {
-    allowed_headers = ["*"]
-    allowed_methods = ["GET"]
-    allowed_origins = ["*"]
-    max_age_seconds = "3000"
+  dynamic "cors_rule" {
+    for_each = var.cors_rules
+    content {
+      allowed_headers = ["*"]
+      allowed_methods = lookup(cors_rule.value, "allowed_methods", ["GET"])
+      allowed_origins = ["*"]
+      max_age_seconds = "3000"
+    }
   }
 
 }
