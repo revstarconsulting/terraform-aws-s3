@@ -39,6 +39,7 @@ variable "block_public_policy" {
 variable "cors_rules" {
   description = "CORS rules for buckets"
   type        = any
+  default     = []
 }
 
 locals {
