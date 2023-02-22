@@ -39,7 +39,12 @@ variable "block_public_policy" {
 variable "cors_rules" {
   description = "CORS rules for buckets"
   type        = any
-  default     = []
+  default = [
+    {
+      allowed_methods = ["GET"],
+      max_age_seconds = "3000"
+    }
+  ]
 }
 
 locals {
