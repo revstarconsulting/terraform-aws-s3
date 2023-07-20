@@ -4,11 +4,6 @@ resource "aws_s3_bucket" "s3_bucket" { #tfsec:ignore:AWS002 tfsec:ignore:AWS017 
   tags = local.common_tags
 }
 
-resource "aws_s3_bucket_acl" "this" {
-  bucket = aws_s3_bucket.s3_bucket.id
-  acl    = "private"
-}
-
 resource "aws_s3_bucket_logging" "this" {
   bucket        = aws_s3_bucket.s3_bucket.id
   target_bucket = var.logging_bucket_name
